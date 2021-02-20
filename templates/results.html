@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+    {% block title %}
+        Movies Search
+    {% endblock %}
+    {% block content %}
+        {{movies}}
+        <hr>
+        {{datas}}
+        {% for data in datas %}
+            <br>
+            <img src="{{data}}">
+            <hr>
+            
+        {% endfor %}
+    {% endblock %}

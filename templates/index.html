@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+    {% block title %}
+        Movies Search
+    {% endblock %}
+    {% block content %}
+        <div class="container">
+            {% if error %}
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>Movie not found .. </strong> make sure movie name is correct.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+            {% endif %}
+            <form action="/results" method="POST">
+                <label for="movie-search" class="form-label">Search Here</label><br>
+                <input type="text" class="form-control" id="movie-search" name="movie_search" required><br>
+                <button type="submit" class="btn btn-primary">search</button>
+            </form>
+        </div>
+    {% endblock %}

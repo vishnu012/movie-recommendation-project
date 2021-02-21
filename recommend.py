@@ -47,6 +47,6 @@ class movieRecommend:
         for element in similer_movies_sorted:
             movies_sorted.append(self.title_from_index(element[0]))
             i = i+1
-            if i>20:
+            if i>23:
                 break
         return movies_sorted

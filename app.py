@@ -1,6 +1,7 @@
 from flask import Flask,render_template,request,url_for,redirect
 from recommend import movieRecommend
 from movieinfo import movie_posters
+from moviextra import movies_year
 import time
 
 
@@ -17,8 +18,12 @@ def results():
         movie_name = request.form['movie_search']
     try:
         similar_movies = mr.movie_recommend(movie_name)
-        datas = movie_posters(similar_movies)
-        return render_template('results.html',movies = similar_movies,datas = datas)
+        print(similar_movies)
+        years = movies_year(similar_movies)
+        print(years)
+        posters = movie_posters(similar_movies,years)
+        print(posters)    
+        return render_template('results.html',movies = similar_movies)
     except:
         return render_template('index.html',error = 'Movie not found ...')
     

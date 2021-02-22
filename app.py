@@ -21,9 +21,9 @@ def results():
         print(similar_movies)
         years = movies_year(similar_movies)
         print(years)
-        # posters = movie_posters(similar_movies,years)
-        # print(posters)    
-        return render_template('results.html',movies = similar_movies)
+        posters = movie_posters(similar_movies,years)
+        print(posters)    
+        return render_template('results.html',datas = zip(similar_movies,posters))
     except:
         return render_template('index.html',error = 'Movie not found ...')
     

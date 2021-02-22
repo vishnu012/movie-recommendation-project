@@ -20,20 +20,6 @@ def movie_posters(movies,years):
 	return posters
 
 
-# def movie_posters(movies,years):
-#     posters = []
-#     i = 0
-#     for movie in movies:
-# 		base_url = "http://www.omdbapi.com/?t={}&y={}&apikey=5c2d953".format(movie,years[i])
-#         response = requests.get(base_url)
-#         data = response.json()
-#         data = data.get('Poster')
-#         posters.append(data)
-#         i = i+1
-#     return posters
-
-
-
 
 # def movie_complete(movies):
 #     years = movies_year(movies)

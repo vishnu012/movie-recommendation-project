@@ -32,14 +32,6 @@
                             </ul>
                             <!-- end header nav -->
 
-                            <!-- header auth -->
-                            <div class="header__auth">
-                                <button class="header__search-btn" type="button">
-                                    <i class="icon ion-ios-search"></i>
-                                </button>
-
-                            </div>
-                            <!-- end header auth -->
 
                             <!-- header menu btn -->
                             <button class="header__btn" type="button">
@@ -87,11 +79,11 @@
             <div class="row">
 
                 <!-- card -->
-                {% for movie in movies %}
+                {% for movie,poster in datas %}
                 <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
                     <div class="card">
                         <div class="card__cover">
-                            <img src="../static/img/covers/cover.jpg" alt="">
+                            <img src="{{poster}}" alt="">
                             <a href="#" class="card__play">
                                 <i class="icon ion-ios-play"></i>
                             </a>

@@ -1,4 +1,4 @@
-
+#import libraries
 import pandas as pd
 import numpy as np 
 from sklearn.feature_extraction.text import CountVectorizer
@@ -11,6 +11,7 @@ file_path = os.path.dirname(os.path.realpath(__file__)) + "/movie_dataset.csv"
 
 movie_data = pd.read_csv(file_path)
 
+#recommendation related
 class movieRecommend:
     
     def combine_features(self,row):
@@ -33,8 +34,11 @@ class movieRecommend:
     
     def movie_recommend(self,user_liked_movie):
         features = ['keywords','cast','genres','director','tagline']
+
+        #data cleaning, removing empty values
         for feature in features:
             movie_data[feature] = movie_data[feature].fillna('')
+
         movie_data['combined_features'] = movie_data.apply(self.combine_features,axis=1)
         cv = CountVectorizer()
         count_matrix = cv.fit_transform(movie_data['combined_features'])
@@ -42,11 +46,12 @@ class movieRecommend:
         movie_index = self.index_from_title(user_liked_movie)
         similer_movies = list(enumerate(cosine_sim[movie_index]))
         similer_movies_sorted = sorted(similer_movies,key=lambda x:x[1],reverse=True)
+
         i = 0
         movies_sorted = []
         for element in similer_movies_sorted:
             movies_sorted.append(self.title_from_index(element[0]))
             i = i+1
-            if i>23:
+            if i>23: #added 23 for making ui better
                 break
         return movies_sorted

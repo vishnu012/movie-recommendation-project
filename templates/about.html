@@ -1,0 +1,203 @@
+{% extends 'base.html' %}
+    {% block title %}
+        Movies Search
+    {% endblock %}
+    {% block content %}
+	<!-- header -->
+	<header class="header">
+		<div class="header__wrap">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="header__content">
+							<!-- header logo -->
+							<a href="/" class="header__logo">
+								<img src="../static/img/logo.svg" alt="">
+							</a>
+								<ul class="header__nav">
+								<li class="header__nav-item">
+									<a href="page.html" class="header__nav-link">Home</a>
+								</li>
+								<li class="header__nav-item">
+									<a href={{ url_for('about') }} class="header__nav-link">About Us</a>
+								</li>
+							</ul>
+							<!-- end header nav -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</header>
+	<!-- end header -->
+
+	<!-- page title -->
+	<section class="section section--first section--bg" data-bg="../static/img/section/section.jpg">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<div class="section__wrap">
+						<!-- section title -->
+						<h2 class="section__title">About Us</h2>
+						<!-- end section title -->
+
+						<!-- breadcrumb -->
+						<ul class="breadcrumb">
+							<li class="breadcrumb__item"><a href="#">Home</a></li>
+							<li class="breadcrumb__item breadcrumb__item--active">About Us</li>
+						</ul>
+						<!-- end breadcrumb -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- end page title -->
+
+	<!-- about -->
+	<section class="section">
+		<div class="container">
+			<div class="row">
+				<!-- section title -->
+				<div class="col-12">
+					<h2 class="section__title"><b>FLIXGO</b> – Best Place for Recommend Movies</h2>
+				</div>
+				<!-- end section title -->
+
+				<!-- section text -->
+				<div class="col-12">
+					<p class="section__text">Our project belongs to the creation of a <b> Web Application</b>.A user search a movie name he already seen. Our goal is to suggest movies based on the user input for achieve this goal we use some Dataset that contain informations like Cast, Genre , Description , Director etc .. to predict movies using <b>Machine Learning</b> approach. 
+					We also provide Ratings and other informations of suggested movies from various sites like Rotten Tomatoes ,imdb etc..</p>
+
+					<p class="section__text section__text--last-with-margin">Our project aims to provide a content based movie recommendation system.Users can find similar movies instantly.</p>
+				</div>
+				<!-- end section text -->
+				<!-- feature -->
+				<div class="col-12 col-md-6 col-lg-4">
+					<div class="feature">
+						<h3 class="feature__title">Vishnu U</h3>
+						<p class="feature__text">Group 9 S5CT</p>
+					</div>
+				</div>
+				<div class="col-12 col-md-6 col-lg-4">
+					<div class="feature">
+						<h3 class="feature__title">Nasmal</h3>
+						<p class="feature__text">Group 9 S5CT</p>
+					</div>
+				</div>
+				<div class="col-12 col-md-6 col-lg-4">
+					<div class="feature">
+						<h3 class="feature__title">Rahul R</h3>
+						<p class="feature__text">Group 9 S5CT</p>
+					</div>
+				</div>
+				<div class="col-12 col-md-6 col-lg-4">
+					<div class="feature">
+						<h3 class="feature__title">Nikhil</h3>
+						<p class="feature__text">Group 9 S5CT</p>
+					</div>
+				</div>
+				<div class="col-12 col-md-6 col-lg-4">
+					<div class="feature">
+						<h3 class="feature__title">Pooja</h3>
+						<p class="feature__text">Group 9 S5CT</p>
+					</div>
+				</div>
+				<!-- end feature -->
+			</div>
+		</div>
+	</section>
+	<!-- end about -->
+
+	<!-- how it works -->
+	<section class="section section--dark">
+		<div class="container">
+			<div class="row">
+				<!-- section title -->
+				<div class="col-12">
+					<h2 class="section__title section__title--no-margin">How it works?</h2>
+				<p class="how__text">When we search a movie, using machine learning algorithm, predict movies  based on its contents</p>
+			</div>
+				<!-- end section title --> 
+
+				<!-- how box -->
+				<div class="col-12 col-md-6 col-lg-4">
+					<div class="how">
+						<span class="how__number">01</span>
+						<h3 class="how__title">Recommend</h3>
+						<p class="how__text">• We randomly picks some movies and display to you.You can search the movies instead of the following steps<br>• What the name of the movie</p>
+					</div>
+				</div>
+				<!-- ebd how box -->
+
+				<!-- how box -->
+				<div class="col-12 col-md-6 col-lg-4">
+					<div class="how">
+						<span class="how__number">02</span>
+						<h3 class="how__title">Choose your Movie</h3>
+						<p class="how__text">Here we show some similar movies based on your search. You can select the movies from the list.</p>
+					</div>
+				</div>
+				<!-- ebd how box -->
+
+				<!-- how box -->
+				<div class="col-12 col-md-6 col-lg-4">
+					<div class="how">
+						<span class="how__number">03</span>
+						<h3 class="how__title">Result</h3>
+						<p class="how__text">Here you can see the reviews and rating of the movie you searched.</p>
+					</div>
+				</div>
+				<!-- ebd how box -->
+			</div>
+		</div>
+	</section>
+	<!-- end how it works -->
+
+
+	<!-- footer -->
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+
+				<!-- footer list -->
+				<div class="col-6 col-sm-4 col-md-3">
+					<h6 class="footer__title">Resources</h6>
+					<ul class="footer__list">
+						<li><a href="/">Home</a></li>
+					</ul>
+				</div>
+				<!-- end footer list -->
+
+
+				<!-- footer list -->
+				<div class="col-12 col-sm-4 col-md-3">
+					<h6 class="footer__title">Contact</h6>
+					<ul class="footer__list">
+						<li><a href="tel:+18002345678">+91 9995660128</a></li>
+						
+					</ul>
+					<ul class="footer__social">
+						<li class="github"><a href="#"><i class="icon ion-logo-github"></i></a></li>
+					</ul>
+				</div>
+				<!-- end footer list -->
+
+				<!-- footer copyright -->
+				<div class="col-12">
+					<div class="footer__copyright">
+						<ul>
+							<li><a href="#">Terms of Use</a></li>
+							<li><a href="#">Privacy Policy</a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- end footer copyright -->
+			</div>
+		</div>
+	</footer>
+	<!-- end footer -->
+
+    {% endblock %}
+

@@ -75,11 +75,15 @@
             <div class="row">
 
                 <!-- card -->
-                {% for movie,poster in datas %}
+                {% for poster,movie,rating,genre in datas %}
                 <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
                     <div class="card">
                         <div class="card__cover">
+                            {% if poster == None %}
+                            <img src="../static/img/movie.png" alt="">
+                            {% else %}
                             <img src="{{poster}}" alt="">
+                            {% endif%}
                             <a href="#" class="card__play">
                                 <i class="icon ion-ios-play"></i>
                             </a>
@@ -87,10 +91,9 @@
                         <div class="card__content">
                             <h3 class="card__title"><a href="deailed.html">{{movie}}</a></h3>
                             <span class="card__category">
-                                <a href="#">Action</a>
-                                <a href="#">Triler</a>
+                                <a href="#">{{genre}}</a>
                             </span>
-                            <span class="card__rate"><i class="icon ion-ios-star"></i>8.4</span>
+                            <span class="card__rate"><i class="icon ion-ios-star"></i>{{rating}}</span>
                         </div>
                     </div>
                 </div>
@@ -126,7 +129,7 @@
                         
                     </ul>
                     <ul class="footer__social">
-                        <li class="github"><a href="#"><i class="icon ion-logo-github"></i></a></li>
+                        <li class="github"><a href="https://github.com/vishnu012/movie-recommendation-project"><i class="icon ion-logo-github"></i></a></li>
                     </ul>
                 </div>
                 <!-- end footer list -->

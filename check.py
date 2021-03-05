@@ -13,11 +13,11 @@ movie_data = pd.read_csv(file_path)
 mr = movieRecommend()
 
 movies = mr.movie_recommend('speed')
-
-for movie,year in zip(movies,years):
-    base_url = "http://www.omdbapi.com/?t={}&y={}&apikey=5c2d953".format(movie,year)
-    response = requests.get(base_url)
-    print(response.json())
-    print()
-    print("----------------------------------------")
-    print()
+print(movies)
+# for movie,year in zip(movies,years):
+#     base_url = "http://www.omdbapi.com/?t={}&y={}&apikey=5c2d953".format(movie,year)
+#     response = requests.get(base_url)
+#     print(response.json())
+#     print()
+#     print("----------------------------------------")
+#     print()

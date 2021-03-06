@@ -1,5 +1,6 @@
 import pandas as pd
 import os
+import numpy as np
 
 file_path = os.path.dirname(os.path.realpath(__file__)) + "/movie_dataset.csv"
 
@@ -12,3 +13,8 @@ def movies_year(movies):
         year = year.split("-")
         movies_year.append(year[0])
     return movies_year
+
+def random_movies():
+    df = movie_data.take(np.random.permutation(len(movie_data))[:9])
+    random_movies = list(df['original_title'])
+    return random_movies

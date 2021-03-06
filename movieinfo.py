@@ -18,10 +18,7 @@ def movies_data(movies,years):
             genres.append(genre)
             rating = data.get('imdbRating')
             ratings.append(rating)
-            print(poster)
-            print(genre)
-            print(rating)
-            print('*********************************')
+            
         except:
             posters.append('N/A')
             ratings.append('N/A')

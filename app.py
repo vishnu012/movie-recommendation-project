@@ -1,7 +1,7 @@
 from flask import Flask,render_template,request,url_for,redirect
 from recommend import movieRecommend
 from movieinfo import movies_data
-from moviextra import movies_year
+from moviextra import movies_year,random_movies
 import time
 
 
@@ -15,6 +15,10 @@ def page_not_found(e):
 
 @app.route('/')
 def home():
+    rand_movies = random_movies()
+    years = movies_year(random_movies)
+    # datas = movies_data(rand_movies,years)
+    # print(datas)
     return render_template('index.html')
 
 @app.route('/results',methods=['POST'])

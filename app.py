@@ -15,11 +15,14 @@ def page_not_found(e):
 
 @app.route('/')
 def home():
-    rand_movies = random_movies()
-    years = movies_year(random_movies)
-    # datas = movies_data(rand_movies,years)
-    # print(datas)
-    return render_template('index.html')
+    rmovies = random_movies()
+    ryears = movies_year(rmovies)
+    print(rmovies,ryears)
+    datas = movies_data(rmovies,ryears)
+    posters = datas['posters']
+    ratings = datas['ratings']
+    genres = datas['genres']
+    return render_template('index.html',datas = zip(posters,rmovies,genres,ratings))
 
 @app.route('/results',methods=['POST'])
 def results():

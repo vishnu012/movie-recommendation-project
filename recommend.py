@@ -1,4 +1,3 @@
-#import libraries
 import pandas as pd
 import numpy as np 
 from sklearn.feature_extraction.text import CountVectorizer
@@ -11,7 +10,6 @@ file_path = os.path.dirname(os.path.realpath(__file__)) + "/movie_dataset.csv"
 
 movie_data = pd.read_csv(file_path)
 
-#recommendation related
 class movieRecommend:
     
     def combine_features(self,row):

@@ -1,5 +1,9 @@
 import requests
 
+
+
+base_api_url = "http://www.omdbapi.com/?t={}&y={}&apikey=c5229271&plot=full"
+
 def movies_data(movies,years):
     posters = []
     genres = []
@@ -8,7 +12,7 @@ def movies_data(movies,years):
     i=0
     for movie,year in zip(movies,years):
         try:
-            base_url = "http://www.omdbapi.com/?t={}&y={}&apikey=c5229271".format(movie,year)
+            base_url = base_api_url.format(movie,year)
             response = requests.get(base_url)
             print(response.status_code)
             data = response.json()
@@ -27,6 +31,14 @@ def movies_data(movies,years):
         datas['posters'] = posters
         datas['genres'] = genres
     return datas
+
+def movie_detail(movie_name,year):
+    base_url = base_api_url.format(movie_name,year)
+    response = requests.get(base_url)
+    return response.json()
+
+
+
 
 # def movie_complete(movies):
 #     years = movies_year(movies)

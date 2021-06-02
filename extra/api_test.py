@@ -9,5 +9,5 @@ response = requests.get(base_url)
 
 
 data = response.json()
-
+print(data)
 print(data.get('Poster'))

@@ -38,7 +38,12 @@ def results():
         return render_template('results.html',datas = zip(posters,similar_movies,genres,ratings))
     except:
         return render_template('index.html',error = 'Movie not found ...')
-    
+
+@app.route('/details')
+def details():
+    return render_template('details.html')  
+
+
 @app.route('/about')
 def about():
     return render_template('about.html')

@@ -1,7 +1,7 @@
 from flask import Flask,render_template,request,url_for,redirect
-from recommend import movieRecommend
-from movieinfo import movies_data,movie_detail
-from moviextra import movies_year,random_movies,movie_year
+from extra.recommend import movieRecommend
+from extra.movieinfo import movies_data,movie_detail
+from extra.moviextra import movies_year,random_movies,movie_year
 import time
 
 

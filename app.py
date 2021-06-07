@@ -43,7 +43,6 @@ def details():
     moviename = request.args.get('movie_name',None)
     movieyear = movie_year(moviename)
     moviedetails = movie_detail(moviename,movieyear)
-    print(moviedetails)
     return render_template('details.html',details=moviedetails)  
 
 

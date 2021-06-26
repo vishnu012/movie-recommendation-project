@@ -14,7 +14,6 @@ def movies_data(movies,years):
         try:
             base_url = base_api_url.format(movie,year)
             response = requests.get(base_url)
-            print(response.status_code)
             data = response.json()
             poster = data.get('Poster')
             posters.append(poster)

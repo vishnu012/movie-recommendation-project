@@ -275,12 +275,14 @@
 							<div class="gallery" itemscope>
 								<div class="row">
 									<!-- gallery item -->
+									{% for urls in details.get('image_urls') %}
 									<figure class="col-12 col-sm-6 col-xl-4" itemprop="associatedMedia" itemscope>
-										<a href="img/gallery/project-1.jpg" itemprop="contentUrl" data-size="1920x1280">
-											<img src="img/gallery/project-1.jpg" itemprop="thumbnail" alt="Image description" />
+										<a href={{urls['url']}} itemprop="contentUrl" data-size="1920x1280">
+											<img src={{urls['url']}} itemprop="thumbnail" alt="Image description" />
 										</a>
-										<figcaption itemprop="caption description">Some image caption 1</figcaption>
+										<figcaption itemprop="caption description">{{urls['image_title']}}</figcaption>
 									</figure>
+									{% endfor %}
 									<!-- end gallery item -->
 								</div>
 							</div>

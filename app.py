@@ -1,7 +1,7 @@
 from flask import Flask,render_template,request,url_for,redirect
 from extra.recommend import movieRecommend
 from extra.movieinfo import movies_data,movie_detail
-from extra.moviextra import movies_year,random_movies,movie_year
+from extra.moviextra import movies_year,random_movies,movie_year,ImageParse
 import time
 
 
@@ -43,6 +43,9 @@ def details():
     moviename = request.args.get('movie_name',None)
     movieyear = movie_year(moviename)
     moviedetails = movie_detail(moviename,movieyear)
+    image_urls = ImageParse(moviedetails['imdbID'])
+    moviedetails['image_urls'] = image_urls
+    print(moviedetails)
     return render_template('details.html',details=moviedetails)  
 
 

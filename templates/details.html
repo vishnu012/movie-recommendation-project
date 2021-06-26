@@ -27,6 +27,15 @@
                                 </li>
                             </ul>
                             <!-- end header nav -->
+                            <!-- header auth -->
+                            <div class="header__auth">
+                                <a href={{url_for('signin')}} class="header__sign-in">
+                                    <i class="icon ion-ios-log-in"></i>
+                                    <span>sign in</span>
+                                </a>
+
+                            </div>
+                            <!-- end header auth -->
 
 
                             <!-- header menu btn -->
@@ -159,9 +168,6 @@
 
 						<!-- content tabs nav -->
 						<ul class="nav nav-tabs content__tabs" id="content__tabs" role="tablist">
-							<li class="nav-item">
-								<a class="nav-link active" data-toggle="tab" href="#tab-1" role="tab" aria-controls="tab-1" aria-selected="true">Comments</a>
-							</li>
 
 							<li class="nav-item">
 								<a class="nav-link" data-toggle="tab" href="#tab-2" role="tab" aria-controls="tab-2" aria-selected="false">Reviews</a>
@@ -182,7 +188,6 @@
 
 							<div class="content__mobile-tabs-menu dropdown-menu" aria-labelledby="mobile-tabs">
 								<ul class="nav nav-tabs" role="tablist">
-									<li class="nav-item"><a class="nav-link active" id="1-tab" data-toggle="tab" href="#tab-1" role="tab" aria-controls="tab-1" aria-selected="true">Comments</a></li>
 
 									<li class="nav-item"><a class="nav-link" id="2-tab" data-toggle="tab" href="#tab-2" role="tab" aria-controls="tab-2" aria-selected="false">Reviews</a></li>
 
@@ -201,43 +206,8 @@
 				<div class="col-12 col-lg-8 col-xl-8">
 					<!-- content tabs -->
 					<div class="tab-content" id="myTabContent">
-						<div class="tab-pane fade show active" id="tab-1" role="tabpanel" aria-labelledby="1-tab">
-							<div class="row">
-								<!-- comments -->
-								<div class="col-12">
-									<div class="comments">
-										<ul class="comments__list">
-											<!-- <li class="comments__item">
-												<div class="comments__autor">
-													<img class="comments__avatar" src="img/user.png" alt="">
-													<span class="comments__name">John Doe</span>
-													<span class="comments__time">30.08.2018, 17:53</span>
-												</div>
-												<p class="comments__text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
-												<div class="comments__actions">
-													<div class="comments__rate">
-														<button type="button"><i class="icon ion-md-thumbs-up"></i>12</button>
 
-														<button type="button">7<i class="icon ion-md-thumbs-down"></i></button>
-													</div>
-
-													<button type="button"><i class="icon ion-ios-share-alt"></i>Reply</button>
-													<button type="button"><i class="icon ion-ios-quote"></i>Quote</button>
-												</div>
-											</li> -->
-										</ul>
-
-										<form action="#" class="form">
-											<textarea id="text" name="text" class="form__textarea" placeholder="Add comment"></textarea>
-											<button type="button" class="form__btn">Send</button>
-										</form>
-									</div>
-								</div>
-								<!-- end comments -->
-							</div>
-						</div>
-
-						<div class="tab-pane fade" id="tab-2" role="tabpanel" aria-labelledby="2-tab">
+						<div class="tab-pane fade show active" id="tab-2" role="tabpanel" aria-labelledby="2-tab">
 							<div class="row">
 								<!-- reviews -->
 								<div class="col-12">

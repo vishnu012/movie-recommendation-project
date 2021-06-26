@@ -1,7 +1,5 @@
 import requests
 
-
-
 base_api_url = "http://www.omdbapi.com/?t={}&y={}&apikey=c5229271&plot=full"
 
 def movies_data(movies,years):
